@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.a {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "filetree tabs"
+        "filetree editor"
+        "statusbar statusbar";
+}
+
+.a>* {
+    overflow: hidden;
+}
+
+.file-tree-container {
+    grid-area: filetree;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.file-tree {
+    overflow: auto;
+}
+
+.editor {
+    grid-area: editor;
+    overflow: auto;
+}
+
+.rjsf {
+    padding: 20px;
+    min-width: 500px;
+}
+
+.statusbar {
+    grid-area: statusbar;
+    display: flex;
+    flex-flow: row nowrap;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+}
+
+.statusbar>* {
+    padding: 2px 7px;
+    border-right: 1px solid grey;
+}
+
+.resize-bar {
+    cursor: col-resize;
+    width: 2px;
+    background: black;
+}
+
+.tabs {
+    grid-area: tabs;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+    border-bottom: 1px solid grey;
+}
+
+.tab {
+    background: grey;
+    border-right: 1px solid grey;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.tab.selected {
+    background: white;
+}
+.tab>button {
+    padding: 2px 5px;
+
+    background: transparent;
+    border: none;
+
+    white-space: nowrap;
+    hyphens: none;
+}
+.tab>button:focus {
+    outline: none;
+}
+.tab>.close-btn {
+    font-size: 0.75em;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+}
+.tab>.close-btn:hover {
+    background: red;
+}
+
+.CodeMirror-code {
+    min-height: 50vh;
+}

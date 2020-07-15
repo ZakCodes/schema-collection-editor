@@ -1,15 +1,20 @@
 {
-  "name": "electron-with-create-react-app",
+  "name": "schema-collection-editor",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "electron": "^1.7.9",
+    "electron": "^5.0.0",
     "foreman": "^2.0.0",
     "react-scripts": "0.8.5"
   },
   "dependencies": {
+    "deepmerge": "^4.0.0",
+    "memoize-one": "^5.0.5",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-jsonschema-form": "^1.7.0",
+    "react-markmirror": "^0.4.16",
+    "yaml": "^1.6.0"
   },
   "homepage": "./",
   "main": "src/electron-starter.js",

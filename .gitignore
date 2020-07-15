@@ -2,12 +2,14 @@
 
 # dependencies
 node_modules
+yarn.lock
 
 # testing
 coverage
 
 # production
 build
+out
 
 # misc
 .DS_Store
